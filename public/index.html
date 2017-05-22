@@ -5,7 +5,7 @@
 <body>
     <h1 style='color:red'>WAAAAAAAAAAAAAAAAAGH!</h1>
     <div id='unauth-view-id' style='display: none'>
-        <button type='button' id='auth-button-id' onclick='twitterOauth.auth()'> Twitter!</button>
+        <button type='button' id='auth-button-id' onclick='twitterOauth.auth()'>Get in Twitter!</button>
     </div>
     <div id='auth-view-id' style='display: none'>
         <div class='twitter-container'>
@@ -13,6 +13,7 @@
             <div id='twits-container-id'></div>
         </div>
     </div>
+    <script src='/js/webService.js'></script>
     <script src='/js/twitterOauth.js'></script>
 
 </body>
