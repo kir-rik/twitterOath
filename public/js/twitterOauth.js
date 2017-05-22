@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(event) {    
     (function(){
+        
+        // localStorage.setItem('isAuth', false);
+
         var unauthView = document.getElementById('unauth-view-id');
         var authButton = document.getElementById('auth-button-id');
 
@@ -28,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
 
         function isAuth(){
-            return new Promise( ( resolve, reject ) => resolve( { isAuth: false } ) )
+            var isAuth = localStorage.getItem("isAuth");
+            return new Promise( ( resolve, reject ) => resolve( { isAuth: isAuth == 'true' } ) )
         };
 
         window.twitterOauth = {
